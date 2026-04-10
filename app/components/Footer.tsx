@@ -1,9 +1,19 @@
-import React from 'react'
+"use client";
+import React, { useEffect, useState } from "react";
 
 function Footer() {
-  return (
-    <div>Footer</div>
-  )
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
+  if (loading) {
+    return <></>;
+  }
+  return <div>Footer</div>;
 }
 
-export default Footer
+export default Footer;
