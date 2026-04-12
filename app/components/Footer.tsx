@@ -13,7 +13,7 @@ function Footer() {
   if (loading) {
     return <></>;
   }
-  return <div>Footer</div>;
+  return <div className=" light:bg-white light:text-black">Footer</div>;
 }
 
 export default Footer;
