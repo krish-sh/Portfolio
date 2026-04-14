@@ -1,5 +1,4 @@
 import React from "react";
-import skill from "../../skill/page";
 
 function HomePage() {
   return (
