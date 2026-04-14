@@ -1,7 +1,7 @@
 "use client";
 
 import { loadEnvFile } from "process";
-import HomePage from "./components/HomePage";
+import HomePage from "./modules/components/HomePage";
 import { useState, useEffect } from "react";
 
 const page = () => {
@@ -10,7 +10,7 @@ const page = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 1000);
   }, []);
 
   if (loading) {
