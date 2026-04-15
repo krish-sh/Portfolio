@@ -1,7 +1,6 @@
 "use client";
 
-import { loadEnvFile } from "process";
-import HomePage from "./components/HomePage";
+import HomePage from "./modules/components/HomePage";
 import { useState, useEffect } from "react";
 
 const page = () => {
@@ -26,7 +25,9 @@ const page = () => {
   return (
     <>
       <div>
-        <HomePage />
+        <section id="home">
+          <HomePage />
+        </section>
       </div>
     </>
   );
