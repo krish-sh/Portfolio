@@ -14,6 +14,7 @@ function NavBar() {
     { name: "About", link: "#about", id: "about" },
     { name: "Project", link: "#project", id: "project" },
     { name: "Skill", link: "#skill", id: "skill" },
+    { name: "ContactUs", link: "#contactUs", id: "contactUs" },
   ];
 
   const itemRefs = useRef({});
@@ -102,12 +103,6 @@ function NavBar() {
             </a>
           ))}
         </div>
-
-        <Link href="/contactUs">
-          <div className="px-4 py-2 mx-4 ml-6 bg-amber-300 text-black rounded-3xl">
-            ContactUs
-          </div>
-        </Link>
 
         <div className="flex items-center gap-3 ml-4">
           <span className="text-zinc-300 dark:text-zinc-700">|</span>
