@@ -4,10 +4,12 @@ import { ThemeToogle } from "@/components/theme-toogle";
 import React, { useEffect, useRef, useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
 
 function NavBar() {
   const [active, setActive] = useState("home");
   const [loading, setLoading] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const navItems = [
     { name: "Home", link: "#home", id: "home" },
@@ -49,7 +51,6 @@ function NavBar() {
     }
   }, [active]);
 
-  // ✅ LOADING
   useEffect(() => {
     setTimeout(() => setLoading(false), 1500);
   }, []);
@@ -83,7 +84,7 @@ function NavBar() {
 
         <h1 className="pr-6 text-xl font-bold">KRISH</h1>
 
-        <div className="relative flex items-center">
+        <div className="hidden md:flex ml-6 relative  items-center">
           <div
             className="absolute top-0 h-full bg-white/10 border border-white/20 rounded-full transition-all duration-300"
             style={{
@@ -107,8 +108,33 @@ function NavBar() {
         <div className="flex items-center gap-3 ml-4">
           <span className="text-zinc-300 dark:text-zinc-700">|</span>
           <ThemeToogle />
+
+          <button
+            className="md:hidden"
+            onClick={() => setOpen(true)}
+            onClickCapture={() => setOpen(false)}
+          >
+            {open ? <X /> : <Menu />}
+          </button>
         </div>
       </div>
+
+      {open && (
+        <div className="md:hidden mt-3 bg-white/5 backdrop-blur-md border border-white/20 rounded-xl p-4 space-y-3">
+          {navItems.map((item) => (
+            <a
+              href={item.link}
+              key={item.id}
+              onClick={() => setOpen(false)}
+              className={`block px-4 py-2 rounded-lg ${
+                active === item.id ? "bg-white/10 " : "hover:bg-white/5"
+              }`}
+            >
+              {item.name}
+            </a>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
