@@ -85,7 +85,7 @@ function HomePage() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
-            <Button className="px-9 py-7 text-xl bg-amber-400 text-black rounded-full  shadow-md hover:scale-105 transition-all duration-300">
+            <Button className="px-9 py-7 text-xl bg-amber-300 text-black rounded-full  shadow-md hover:scale-105 transition-all duration-300">
               <Mail size="80" />
               <a href="#contactUs"> ContactUs</a>
             </Button>
@@ -101,7 +101,7 @@ function HomePage() {
           <img
             src="/image.png"
             alt="profile"
-            className="realtive z-10 w-[320px] md:w-[450px] object-cover translate-y-45"
+            className="realtive z-10 w-[320px] md:w-[450px] object-cover translate-y-44"
           />
           <div className=" absolute top-10 right-10 w-3 h-3 bg-purple-500 rounded-full animate-pulse"></div>
 
