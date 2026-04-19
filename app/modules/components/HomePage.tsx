@@ -97,11 +97,11 @@ function HomePage() {
         </div>
         {/* Left Image Div */}
         <div className="w-full md:w-1/2 flex justify-center  md:h-[600px] relative items-end   ">
-          <div className="absolute w-[320px] h-[320px] md:w-[500px] md:h-[500px] bg-amber-300 rounded-full blur-3xl"></div>
+          <div className="absolute w-[200px]   h-[200px] md:w-[500px]  md:h-[500px] bg-amber-300 rounded-full blur-3xl"></div>
           <img
             src="/image.png"
             alt="profile"
-            className="realtive z-10 w-[320px] md:w-[450px] object-cover translate-y-44"
+            className="realtive z-10 w-[200px] md:w-[450px] object-cover translate-y-3 sm:translate-y-10 md:translate-y-44"
           />
           <div className=" absolute top-10 right-10 w-3 h-3 bg-purple-500 rounded-full animate-pulse"></div>
 
