@@ -1,56 +1,58 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { Database, LayoutGrid, Monitor, Smartphone } from "lucide-react";
 import React from "react";
 
 function About() {
   return (
-    <div className="flex justify-center items-center  min-h-screen px-6 md:px-20 md:mt-0 mt-6 flex-col md:flex-row gap-12 w-full">
-      {/* Left Section */}
-      <div className="w-full md:w-1/2 md:m-0 m-2 p-6 hidden md:flex">
-        <img src="/undraw_team_85hs.svg" alt="" className="w-2xl " />
+    <div className="min-h-screen px-6 md:px-20 md:py-50 py-32  ">
+      <div className="mb-16">
+        <h1 className="md:text-3xl text-2xl  font-bold mb-6 ">Experience</h1>
+        <h3 className="md:text-lg  text-xlfont-semibold">
+          Web Development Internship - Unified Mentor
+        </h3>
+        <p className="text-sm text-gray-400 mt-1">Aug/2025 - Oct/2025</p>
+        <p className="text-gray-500 mt-4 ">
+          During my internship at Unified Mentor, I had the opportunity to work
+          on a variety of projects that allowed me to apply and expand my web
+          development skills.
+        </p>
       </div>
-      {/* Right Section */}
-      <div className="w-full md:w-1/2 space-y-6 flex flex-col  ">
-        <h1 className="font-bold text-3xl tracking-widest text-center md:text-start text-amber-300 ">
-          About Me
-        </h1>
-        <p className="  dark:text-zinc-400 text-zinc-900 leading-relaxed">
-          I’m Krish Sharma, a BCA student at Swami Swatantranand College,
-          Dinanagar, Punjab, with a strong interest in building modern web
-          applications and understanding how systems work behind the scenes
-        </p>
-        <p className="text-zinc-900 dark:text-zinc-400 leading-relaxed">
-          I started my coding journey by learning web development through Udemy,
-          where I built a solid foundation in frontend and backend technologies,
-          along with basics of Docker, PostgreSQL, and both SQL and NoSQL
-          databases. Over time, I shifted my focus from just learning to
-          actually building real-world projects.
-        </p>
-        <p className="text-zinc-900 dark:text-zinc-400 leading-relaxed">
-          In 2025, I completed a{" "}
-          <span className="bg-amber-300 text-black p-1">
-            3-month internship
-          </span>{" "}
-          as a Full Stack Developer, where I worked on multiple projects and
-          gained practical experience in developing complete applications.
-        </p>
-        <p className="text-zinc-900 dark:text-zinc-400 leading-relaxed">
-          My mindset is simple — stay consistent, focus on goals, and
-          continuously improve. I believe in adapting to new technologies and
-          learning whatever is required to grow and contribute effectively.
-        </p>
-        <p className="text-zinc-900 dark:text-zinc-400 leading-relaxed">
-          Currently, I’m also focusing on{" "}
-          <span className="bg-amber-300 p-1 text-black">
-            Data Structures and Algorithms
-          </span>{" "}
-          to strengthen my problem-solving skills and become a better developer.
-        </p>
-        <p className="text-zinc-900 dark:text-zinc-400 leading-relaxed">
-          I’m looking forward to opportunities where I can contribute, learn,
-          and give my 100% while growing in the tech industry.
-        </p>
+      {/* what i Do */}
+      <div className="md:mt-25 mt-0">
+        <h2 className="text-2xl md:text-3xl font-bold md:mb-15 mb-10">
+          What I do?
+        </h2>
+        <div className="grid md:grid-cols-3 gap-10 ">
+          <div className="space-y-4 p-6 rounded-xl hover:bg-zinc-800/5 hover:shadow-md    border border-gray-50/10 backdrop-blur-md py-8 px-4 hover:scale-105 transition-all duration-300">
+            <LayoutGrid className="w-10 h-10 text-blue-500" />
+            <h3 className="text-lg font-semibold">Frontend Development</h3>
+            <p className="text-gray-600 text-sm">
+              Building responsive and interactive user interfaces using React,
+              Next.js and modern CSS.{" "}
+            </p>
+          </div>
+
+          <div className="space-y-4 p-6 rounded-xl hover:bg-zinc-800/5 hover:shadow-md    border border-gray-50/10 backdrop-blur-md py-8 px-4 hover:scale-105 transition-all duration-300">
+            <Database className="w-10 h-10 text-blue-500" />
+            <h3 className="text-lg font-semibold">Backend Development</h3>
+            <p className="text-gray-600 text-sm">
+              Developing REST APIs and server-side logic using Node.js and
+              Express.{" "}
+            </p>
+          </div>
+
+          <div className="space-y-4 p-6 rounded-xl hover:bg-zinc-800/5 hover:shadow-md    border border-gray-50/10 backdrop-blur-md py-8 px-4 hover:scale-105 transition-all duration-300">
+            <Monitor className="w-10 h-10 text-blue-500" />
+            <h3 className="text-lg font-semibold">
+              Full-Stack Web Application
+            </h3>
+            <p className="text-gray-600 text-sm">
+              Creating complete web applications from frontend to backend with
+              database integration.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
