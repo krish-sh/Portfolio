@@ -5,6 +5,7 @@ import NavBar from "./modules/components/NavBar";
 import Footer from "./modules/components/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
+import toast, { Toaster } from "react-hot-toast";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -50,7 +51,6 @@ export default function RootLayout({
           type="text/css"
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
         />
-        ;
       </head>
       <body className="min-h-full flex flex-col">
         <ThemeProvider
@@ -61,6 +61,7 @@ export default function RootLayout({
         >
           <NavBar />
           {children}
+          <Toaster />
           <Footer />
         </ThemeProvider>
       </body>

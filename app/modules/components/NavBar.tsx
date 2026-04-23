@@ -7,8 +7,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 function NavBar() {
-  const [active, setActive] = useState("home");
-  const [loading, setLoading] = useState(true);
+  const [active, setActive] = useState("#home");
   const [open, setOpen] = useState(false);
 
   const navItems = [
@@ -16,7 +15,6 @@ function NavBar() {
     { name: "About", link: "#about", id: "about" },
     { name: "Project", link: "#project", id: "project" },
     { name: "Skill", link: "#skill", id: "skill" },
-    { name: "ContactUs", link: "#contactUs", id: "contactUs" },
   ];
 
   const itemRefs = useRef({});
@@ -51,28 +49,6 @@ function NavBar() {
     }
   }, [active]);
 
-  useEffect(() => {
-    setTimeout(() => setLoading(false), 1500);
-  }, []);
-
-  if (loading) {
-    return (
-      <Skeleton className="fixed top-10 left-1/2 -translate-x-1/2">
-        <Skeleton className="flex items-center bg-white/5 px-6 py-3 rounded-full backdrop-blur-md border border-white/20 shadow-lg animate-pulse">
-          <Skeleton className="w-10 h-10 rounded-full" />
-          <Skeleton className="w-20 h-5 ml-3" />
-          <Skeleton className="flex ml-6 gap-3">
-            <Skeleton className="w-16 h-8 rounded-full" />
-            <Skeleton className="w-16 h-8 rounded-full" />
-            <Skeleton className="w-16 h-8 rounded-full" />
-            <Skeleton className="w-16 h-8 rounded-full" />
-          </Skeleton>
-          <Skeleton className="w-20 h-8 rounded-full ml-6" />
-        </Skeleton>
-      </Skeleton>
-    );
-  }
-
   return (
     <div className="fixed top-10 left-1/2 -translate-x-1/2 z-50">
       <div className="flex items-center bg-white/5 px-6 py-3 rounded-full backdrop-blur-md border border-white/20 shadow-lg">
@@ -106,7 +82,11 @@ function NavBar() {
         </div>
 
         <div className="flex items-center gap-3 ml-4">
+          <div className="hidden md:block bg-amber-300 px-3 py-2 rounded-2xl text-black">
+            <a href="#contactUs">ContactUs</a>
+          </div>
           <span className="text-zinc-300 dark:text-zinc-700">|</span>
+
           <ThemeToogle />
 
           <button
@@ -133,6 +113,9 @@ function NavBar() {
               {item.name}
             </a>
           ))}
+          <a href="#contactUs" className="pl-4">
+            ContactUs
+          </a>
         </div>
       )}
     </div>
