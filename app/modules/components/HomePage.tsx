@@ -5,67 +5,6 @@ import { FileDown, Mail } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
 function HomePage() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 1500);
-  });
-
-  if (loading) {
-    return (
-      <div className="min-h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-20">
-        {/* Right Text Skeleton */}
-        <div className="w-full md:w-1/2 flex flex-col justify-center gap-6 pt-32">
-          <div className="space-y-4">
-            {/* Name */}
-            <Skeleton className="h-4 w-32 bg-zinc-200 dark:bg-zinc-800/40" />
-
-            {/* Heading */}
-            <Skeleton className="h-10 md:h-14 w-3/4 bg-zinc-200 dark:bg-zinc-800/40" />
-            <Skeleton className="h-10 md:h-14 w-1/2 bg-zinc-200 dark:bg-zinc-800/40" />
-
-            {/* Subheading */}
-            <Skeleton className="h-6 w-full bg-zinc-200 dark:bg-zinc-800/40" />
-            <Skeleton className="h-6 w-5/6 bg-zinc-200 dark:bg-zinc-800/40" />
-          </div>
-
-          {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mt-6">
-            <Skeleton className="h-16 w-52 rounded-full bg-zinc-200 dark:bg-zinc-800/40" />
-            <Skeleton className="h-16 w-52 rounded-full bg-zinc-200 dark:bg-zinc-800/40" />
-          </div>
-        </div>
-
-        {/* Left Image Skeleton */}
-        <div className="w-full md:w-1/2 flex justify-center md:h-[600px] relative items-end">
-          {/* Glow Circle */}
-          <div className="absolute w-[320px] h-[320px] md:w-[500px] md:h-[500px] bg-zinc-300/20 dark:bg-zinc-700/30 rounded-full blur-3xl"></div>
-
-          {/* Image Placeholder */}
-          <Skeleton className="relative z-10 w-[320px] h-[400px] md:w-[450px] md:h-[500px] rounded-full " />
-
-          {/* Floating Dots */}
-          <div className="absolute top-10 right-10">
-            <Skeleton className="w-3 h-3 rounded-full bg-zinc-200 dark:bg-zinc-800/40" />
-          </div>
-
-          <div className="absolute bottom-10 left-10">
-            <Skeleton className="w-2 h-2 rounded-full bg-zinc-200 dark:bg-zinc-800/40" />
-          </div>
-
-          <div className="absolute bottom-44 left-50">
-            <Skeleton className="w-3 h-3 rounded-full bg-zinc-200 dark:bg-zinc-800/40" />
-          </div>
-
-          <div className="absolute top-1/2 left-0">
-            <Skeleton className="w-2 h-2 rounded-full bg-zinc-200 dark:bg-zinc-800/40" />
-          </div>
-        </div>
-      </div>
-    );
-  }
   return (
     <>
       <div className="min-h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-20 ">
