@@ -17,7 +17,7 @@ function NavBar() {
     { name: "Skill", link: "#skill", id: "skill" },
   ];
 
-  const itemRefs = useRef({});
+  const itemRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
 
   useEffect(() => {
     const handleScroll = () => {
@@ -76,7 +76,9 @@ function NavBar() {
             <a
               key={item.id}
               href={item.link}
-              ref={(el) => (itemRefs.current[item.id] = el)}
+              ref={(el) => {
+                itemRefs.current[item.id] = el;
+              }}
               className="relative z-10 px-4 py-2 mx-1"
             >
               {item.name}
