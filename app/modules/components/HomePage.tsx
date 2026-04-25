@@ -18,8 +18,7 @@ function HomePage() {
               Hello, my name's <span>krish</span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold text-zinc-500 dark:text-zinc-400 ">
-              Full Stack Developer focused on building modern and scalable web
-              application.{" "}
+              Full Stack Developer | Building Scalable Web Application
             </h2>
           </div>
 

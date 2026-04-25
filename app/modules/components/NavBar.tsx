@@ -2,13 +2,13 @@
 
 import { ThemeToogle } from "@/components/theme-toogle";
 import React, { useEffect, useRef, useState } from "react";
-import { Skeleton } from "@/components/ui/skeleton";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 function NavBar() {
-  const [active, setActive] = useState("#home");
+  const [active, setActive] = useState("home");
   const [open, setOpen] = useState(false);
+  const [pillStyle, setPillStyle] = useState({ left: 0, width: 0 });
 
   const navItems = [
     { name: "Home", link: "#home", id: "home" },
@@ -18,12 +18,11 @@ function NavBar() {
   ];
 
   const itemRefs = useRef({});
-  const [pillStyle, setPillStyle] = useState({ left: 0, width: 0 });
 
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll("section");
-      let current = "home";
+      let current = "#home";
 
       sections.forEach((section) => {
         const sectionTop = section.offsetTop;
@@ -40,13 +39,17 @@ function NavBar() {
   }, []);
 
   useEffect(() => {
-    const el = itemRefs.current[active];
-    if (el) {
-      setPillStyle({
-        left: el.offsetLeft,
-        width: el.offsetWidth,
-      });
-    }
+    const timeout = setTimeout(() => {
+      const el = itemRefs.current[active];
+      if (el) {
+        setPillStyle({
+          left: el.offsetLeft,
+          width: el.offsetWidth,
+        });
+      }
+    }, 50); // small delay
+
+    return () => clearTimeout(timeout);
   }, [active]);
 
   return (
