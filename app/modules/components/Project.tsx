@@ -5,8 +5,11 @@ function Project() {
   const projects = [
     {
       name: "Vibe Code Editor",
-      description: `A Code Editor Application. that work  like the vs Code Editor But the main  thing in the application is when wanted to work any library like React,NextJs,Express any other it installed just choose any one of these and start work. Main thik is it have built in Ai assistant that help you to write code.`,
-      image: "#",
+      description: `Vibe Code Editor
+        → Real-time code editor with multi-language support
+        → Built with Next.js + Monaco Editor
+        → Handles dynamic execution and UI rendering`,
+      image: "/vibeCode.png",
       LiveLink: "#",
       GitHubLink: "https://github.com/krish-sh/playground_code_editor",
     },
