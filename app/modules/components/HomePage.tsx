@@ -29,7 +29,7 @@ function HomePage() {
             </Button>
             <Button className="px-9 py-7 text-xl  border border-white/10 backdrop-blur-md hover:bg-white/10 rounded-full  transition-all duration-300">
               <FileDown size={52} strokeWidth={1.5} />
-              <a href="/KrishSharmaCV.pdf"> Download CV</a>
+              <a href="/Krish_sharma_Resume.pdf"> Download CV</a>
             </Button>
           </div>
         </div>
